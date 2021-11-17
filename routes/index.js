@@ -48,5 +48,13 @@ router.get('/places/:places_id/delete', (req, res, next) => {
 		.catch(err => next(err))
 });
 
+router.get('/api', (req, res, next) => {
+	Places.find()
+		.then(allPlaces => {
+			res.json({ places: allPlaces });
+		})
+		.catch(err => console.log(err))
+    })
+
 
 module.exports = router;
