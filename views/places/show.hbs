@@ -1,0 +1,14 @@
+<h3> Esta es la lista </h3>
+{{#each places}}
+            <li>
+                <a href=""> Name: {{name}}</a> <br>
+                <a href=""> Description: {{type}}</a> </br> <br>
+                <a href="/places/{{_id}}/edit">Edit this restaurant</a> <br></br>
+                <a href="/places/{{ this._id}}/delete">Delete</a>
+            </li>
+        {{/each }}
+
+  <br>
+  <br>
+  <br>
+<a href="/">Vuelve a la lista</a>
